@@ -1,1 +1,80 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quick Instructor Registration</title><link rel="stylesheet" href="style.css"></head><body><main class="page"><h1>Quick Instructor Registration</h1><hr><p class="important"><b>Important:</b> Your application must be completed and submitted within 7 days. If not submitted within this period, the application will be automatically discarded.</p><form onsubmit="event.preventDefault();alert('Demo only: OTP service is not connected. No number has been sent or stored.');"><label>* Mobile Number</label><input type="tel" inputmode="numeric" maxlength="10" placeholder="Enter Mobile Number" required><details><summary>Helpful Video Guides for Instructor Registration</summary><p>Video guides are not connected in this demo.</p></details><div class="actions"><a class="btn outline" href="index.html">CANCEL</a><button class="btn" type="submit">SEND OTP</button></div></form><a class="back" href="index.html">← Back to Home</a></main></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instructor Registration</title>
+<style>
+body {
+  margin: 0;
+  padding: 15px;
+  font-family: Arial, sans-serif;
+  background: #f3f5f9;
+}
+.container {
+  max-width: 450px;
+  margin: 30px auto;
+  padding: 22px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px #ccc;
+}
+h2 { text-align: center; color: #173d70; }
+.notice {
+  background: #fff3cd;
+  padding: 13px;
+  border-radius: 5px;
+  line-height: 1.5;
+}
+input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13px;
+  margin: 12px 0;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+button {
+  padding: 12px;
+  border: 0;
+  border-radius: 5px;
+  background: #173d70;
+  color: white;
+  cursor: pointer;
+}
+.actions { display: flex; gap: 10px; }
+.actions button { width: 50%; }
+.cancel { background: #777; }
+.back {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #173d70;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h2>Quick Instructor Registration</h2>
+
+<div class="notice">
+<strong>Important Notice:</strong><br>
+Please enter your registered mobile number to continue.
+</div>
+
+<form onsubmit="return false;">
+<input type="tel" placeholder="Mobile Number" maxlength="10" required>
+
+<h3>Helpful Video Guides</h3>
+<p>Please refer to the official video guides before registration.</p>
+
+<div class="actions">
+<button type="reset" class="cancel">CANCEL</button>
+<button type="button" onclick="alert('Official OTP service connection required.')">SEND OTP</button>
+</div>
+</form>
+
+<a class="back" href="index.html">← Back to Home</a>
+</div>
+</body>
+</html>
