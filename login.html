@@ -1,1 +1,209 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Select Scheme / Login</title><link rel="stylesheet" href="style.css"></head><body><main class="page narrow"><a class="back top" href="index.html">✕ Close</a><h1 class="center">Select Scheme</h1><div class="tabs"><button class="active" onclick="choose('CTS',this)">CTS</button><button onclick="choose('CITS',this)">CITS</button></div><h2 id="schemeTitle">CTS</h2><div class="roles" id="roles"></div><p class="note">Demo only: role cards do not authenticate users or connect to an official portal.</p><a class="back" href="index.html">← Back to Home</a></main><script>const roles=['Trainee','Instructor','ITI/NSTI Creator','ITI/NSTI Approver','NIMI Admin','Examiner','Nodal ITI','State-Examination','RDSDE','DGT TC Cell','DCT CD Cell','DCT TT Cell','DGT TT Cell','NPIU Creator','Examination Controller'];function choose(s,b){document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById('schemeTitle').textContent=s;render()}function render(){document.getElementById('roles').innerHTML=roles.map((r,i)=>`<button class="role" onclick="alert('Demo only: ${r} login is not connected.')"><span>◉</span><strong>${r}</strong><small>Login →</small></button>`).join('')}render();</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LOGIN</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    background: #f3f5f9;
+}
+.container {
+    max-width: 500px;
+    margin: 25px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px #ccc;
+}
+h2 {
+    text-align: center;
+    color: #173d70;
+}
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+.tabs button {
+    width: 50%;
+    padding: 12px;
+    border: 0;
+    background: #173d70;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.roles {
+    display: grid;
+    gap: 10px;
+}
+.roles a {
+    display: block;
+    padding: 13px;
+    text-decoration: none;
+    color: #173d70;
+    border: 1px solid #173d70;
+    border-radius: 5px;
+    text-align: center;
+}
+.back {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #173d70;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h2>LOGIN</h2>
+
+<div class="tabs">
+<button onclick="selectScheme('CTS')">CTS</button>
+<button onclick="selectScheme('CITS')">CITS</button>
+</div>
+
+<h3 id="heading" style="text-align:center">Select Your Role</h3>
+
+<div class="roles">
+<a href="#">Trainee</a>
+<a href="#">Instructor</a>
+<a href="#">ITI Creator / Approver</a>
+<a href="#">NSTI Creator / Approver</a>
+<a href="#">NIMI Admin</a>
+<a href="#">Examiner</a>
+<a href="#">Nodal ITI</a>
+<a href="#">State Examination</a>
+<a href="#">RDSDE</a>
+<a href="#">DGT TC Cell</a>
+<a href="#">DCT CD Cell</a>
+<a href="#">DCT TT Cell</a>
+<a href="#">DGT TT Cell</a>
+<a href="#">NPIU Creator</a>
+<a href="#">Examination Controller</a>
+</div>
+
+<a class="back" href="index.html">← Back to Home</a>
+
+</div>
+
+<script>
+function selectScheme(name) {
+ document.getElementById("heading").innerText =
+ name + " - Select Your Role";
+}
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LOGIN</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    background: #f3f5f9;
+}
+.container {
+    max-width: 500px;
+    margin: 25px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px #ccc;
+}
+h2 {
+    text-align: center;
+    color: #173d70;
+}
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+.tabs button {
+    width: 50%;
+    padding: 12px;
+    border: 0;
+    background: #173d70;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.roles {
+    display: grid;
+    gap: 10px;
+}
+.roles a {
+    display: block;
+    padding: 13px;
+    text-decoration: none;
+    color: #173d70;
+    border: 1px solid #173d70;
+    border-radius: 5px;
+    text-align: center;
+}
+.back {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #173d70;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h2>LOGIN</h2>
+
+<div class="tabs">
+<button onclick="selectScheme('CTS')">CTS</button>
+<button onclick="selectScheme('CITS')">CITS</button>
+</div>
+
+<h3 id="heading" style="text-align:center">Select Your Role</h3>
+
+<div class="roles">
+<a href="#">Trainee</a>
+<a href="#">Instructor</a>
+<a href="#">ITI Creator / Approver</a>
+<a href="#">NSTI Creator / Approver</a>
+<a href="#">NIMI Admin</a>
+<a href="#">Examiner</a>
+<a href="#">Nodal ITI</a>
+<a href="#">State Examination</a>
+<a href="#">RDSDE</a>
+<a href="#">DGT TC Cell</a>
+<a href="#">DCT CD Cell</a>
+<a href="#">DCT TT Cell</a>
+<a href="#">DGT TT Cell</a>
+<a href="#">NPIU Creator</a>
+<a href="#">Examination Controller</a>
+</div>
+
+<a class="back" href="index.html">← Back to Home</a>
+
+</div>
+
+<script>
+function selectScheme(name) {
+ document.getElementById("heading").innerText =
+ name + " - Select Your Role";
+}
+</script>
+
+</body>
+</html>
