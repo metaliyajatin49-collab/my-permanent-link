@@ -1,1 +1,100 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Result</title><link rel="stylesheet" href="style.css"></head><body><main class="page"><h1>Result</h1><hr><form onsubmit="event.preventDefault();alert('Demo only: result lookup is not connected to an official database. No result can be retrieved here.');"><label>* Please Select</label><div class="radio"><label><input type="radio" name="scheme" required> CTS</label><label><input type="radio" name="scheme"> CITS</label></div><label>* PRN No</label><input type="text" placeholder="Enter PRN No" required><label>* DOB</label><input type="date" required><div class="actions"><button class="btn" type="submit">SUBMIT</button><a class="btn outline" href="index.html">CANCEL</a></div></form><a class="back" href="index.html">← Back to Home</a></main></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RESULT</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    background: #f3f5f9;
+}
+.container {
+    max-width: 450px;
+    margin: 35px auto;
+    padding: 22px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px #ccc;
+}
+h2 {
+    text-align: center;
+    color: #173d70;
+}
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+button {
+    padding: 12px;
+    border: 0;
+    border-radius: 5px;
+    background: #173d70;
+    color: white;
+    cursor: pointer;
+}
+.tabs button {
+    width: 50%;
+}
+input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 13px;
+    margin: 10px 0;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+.actions {
+    display: flex;
+    gap: 10px;
+}
+.actions button {
+    width: 50%;
+}
+.cancel {
+    background: #777;
+}
+.back {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #173d70;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<h2>RESULT</h2>
+
+<div class="tabs">
+<button onclick="selectScheme('CTS')">CTS</button>
+<button onclick="selectScheme('CITS')">CITS</button>
+</div>
+
+<h3 id="heading">CTS RESULT</h3>
+
+<form onsubmit="return false;">
+<input type="text" placeholder="PRN No" required>
+<input type="date" required>
+
+<div class="actions">
+<button type="button" onclick="alert('Official result system connection required.')">SUBMIT</button>
+<button type="reset" class="cancel">CANCEL</button>
+</div>
+</form>
+
+<a class="back" href="index.html">← Back to Home</a>
+</div>
+
+<script>
+function selectScheme(name) {
+document.getElementById("heading").innerText = name + " RESULT";
+}
+</script>
+</body>
+</html>
